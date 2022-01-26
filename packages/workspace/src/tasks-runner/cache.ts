@@ -1,5 +1,6 @@
-import { appRootPath } from '@nrwl/tao/src/utils/app-root';
 import { Task } from '@nrwl/devkit';
+import { appRootPath } from '@nrwl/tao/src/utils/app-root';
+import { exec, spawn } from 'child_process';
 import { exists, lstat, readdir } from 'fs';
 import {
   copy,
@@ -12,9 +13,8 @@ import {
   writeFile,
 } from 'fs-extra';
 import { dirname, join, resolve, sep } from 'path';
-import { DefaultTasksRunnerOptions } from './default-tasks-runner';
-import { spawn, exec } from 'child_process';
 import { cacheDir } from '../utilities/cache-directory';
+import { DefaultTasksRunnerOptions } from './default-tasks-runner';
 
 const util = require('util');
 
